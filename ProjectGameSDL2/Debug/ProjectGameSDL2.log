@@ -1,86 +1,10 @@
-﻿  BaseObject.cpp
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\CommonFunc.h(49,2): warning C4091: 'typedef ': ignored on left of 'Map' when no variable is declared
-  (compiling source file 'BaseObject.cpp')
-  
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\CommonFunc.h(58,2): warning C4091: 'typedef ': ignored on left of 'Input' when no variable is declared
-  (compiling source file 'BaseObject.cpp')
-  
-  BaseObject.h
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\CommonFunc.h(49,2): warning C4091: 'typedef ': ignored on left of 'Map' when no variable is declared
-  (compiling source file 'BaseObject.h')
-  
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\CommonFunc.h(58,2): warning C4091: 'typedef ': ignored on left of 'Input' when no variable is declared
-  (compiling source file 'BaseObject.h')
-  
-  BulletObject.cpp
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\CommonFunc.h(49,2): warning C4091: 'typedef ': ignored on left of 'Map' when no variable is declared
-  (compiling source file 'BulletObject.cpp')
-  
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\CommonFunc.h(58,2): warning C4091: 'typedef ': ignored on left of 'Input' when no variable is declared
-  (compiling source file 'BulletObject.cpp')
-  
-  CommonFunc.cpp
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\CommonFunc.h(49,2): warning C4091: 'typedef ': ignored on left of 'Map' when no variable is declared
-  (compiling source file 'CommonFunc.cpp')
-  
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\CommonFunc.h(58,2): warning C4091: 'typedef ': ignored on left of 'Input' when no variable is declared
-  (compiling source file 'CommonFunc.cpp')
-  
-  ImpTimer.cpp
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\CommonFunc.h(49,2): warning C4091: 'typedef ': ignored on left of 'Map' when no variable is declared
-  (compiling source file 'ImpTimer.cpp')
-  
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\CommonFunc.h(58,2): warning C4091: 'typedef ': ignored on left of 'Input' when no variable is declared
-  (compiling source file 'ImpTimer.cpp')
-  
-  MainObject.cpp
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\CommonFunc.h(49,2): warning C4091: 'typedef ': ignored on left of 'Map' when no variable is declared
-  (compiling source file 'MainObject.cpp')
-  
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\CommonFunc.h(58,2): warning C4091: 'typedef ': ignored on left of 'Input' when no variable is declared
-  (compiling source file 'MainObject.cpp')
-  
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\MainObject.cpp(78,19): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\MainObject.cpp(79,19): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\MainObject.cpp(146,52): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\MainObject.cpp(151,72): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\MainObject.cpp(165,20): warning C4018: '<': signed/unsigned mismatch
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\MainObject.cpp(193,26): warning C4305: '+=': truncation from 'double' to 'float'
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\MainObject.cpp(257,25): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\MainObject.cpp(258,44): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\MainObject.cpp(260,16): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\MainObject.cpp(261,33): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\MainObject.cpp(280,18): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\MainObject.cpp(300,24): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\MainObject.cpp(310,14): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\MainObject.cpp(311,28): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\MainObject.cpp(313,25): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\MainObject.cpp(314,45): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\MainObject.cpp(332,18): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\MainObject.cpp(358,24): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\MainObject.cpp(374,43): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\MainObject.cpp(385,29): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\MainObject.cpp(395,29): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-  MainObject.h
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\CommonFunc.h(49,2): warning C4091: 'typedef ': ignored on left of 'Map' when no variable is declared
-  (compiling source file 'MainObject.h')
-  
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\CommonFunc.h(58,2): warning C4091: 'typedef ': ignored on left of 'Input' when no variable is declared
-  (compiling source file 'MainObject.h')
-  
-  game_map.cpp
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\CommonFunc.h(49,2): warning C4091: 'typedef ': ignored on left of 'Map' when no variable is declared
-  (compiling source file 'game_map.cpp')
-  
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\CommonFunc.h(58,2): warning C4091: 'typedef ': ignored on left of 'Input' when no variable is declared
-  (compiling source file 'game_map.cpp')
-  
-  main.cpp
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\CommonFunc.h(49,2): warning C4091: 'typedef ': ignored on left of 'Map' when no variable is declared
-  (compiling source file 'main.cpp')
-  
-C:\GameSDL2\ProjectGameSDL2\ProjectGameSDL2\CommonFunc.h(58,2): warning C4091: 'typedef ': ignored on left of 'Input' when no variable is declared
-  (compiling source file 'main.cpp')
-  
-  Generating Code...
-  ProjectGameSDL2.vcxproj -> C:\GameSDL2\ProjectGameSDL2\Debug\ProjectGameSDL2.exe
+﻿  main.cpp
+C:\GameSDL2\ProjectGameSDL2Copy\ProjectGameSDL2\main.cpp(150,50): warning C4018: '>': signed/unsigned mismatch
+C:\GameSDL2\ProjectGameSDL2Copy\ProjectGameSDL2\main.cpp(158,21): warning C4018: '<': signed/unsigned mismatch
+C:\GameSDL2\ProjectGameSDL2Copy\ProjectGameSDL2\main.cpp(171,24): warning C4018: '<': signed/unsigned mismatch
+C:\GameSDL2\ProjectGameSDL2Copy\ProjectGameSDL2\main.cpp(212,49): warning C4018: '>': signed/unsigned mismatch
+C:\GameSDL2\ProjectGameSDL2Copy\ProjectGameSDL2\main.cpp(220,21): warning C4018: '<': signed/unsigned mismatch
+C:\GameSDL2\ProjectGameSDL2Copy\ProjectGameSDL2\main.cpp(228,24): warning C4018: '<': signed/unsigned mismatch
+C:\GameSDL2\ProjectGameSDL2Copy\ProjectGameSDL2\main.cpp(257,24): warning C4018: '<': signed/unsigned mismatch
+Debug\BaseObject.obj : warning LNK4042: object specified more than once; extras ignored
+  ProjectGameSDL2.vcxproj -> C:\GameSDL2\ProjectGameSDL2Copy\Debug\ProjectGameSDL2.exe

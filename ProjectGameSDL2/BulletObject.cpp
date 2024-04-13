@@ -3,8 +3,7 @@
 
 BulletObject::BulletObject()
 {
-	x_val_ = 0;
-	y_val_ = 0;
+	speed_of_bullet_ = 0;
 	is_move_ = false;
 }
 
@@ -15,64 +14,18 @@ BulletObject::~BulletObject()
 
 void BulletObject::HandleMove(const int& x_border, const int& y_border)
 {
-	if (bullet_dir_ == DIR_RIGHT)
+	//std::cout << angle_ << "\n";
+	float angle_radian = angle_ / 180.0 * M_PI;
+	x_val_ = speed_of_bullet_ * cos(angle_radian);
+	y_val_ = sqrt(pow(speed_of_bullet_, 2) - pow(x_val_, 2));
+
+	if (angle_ < 0 || angle_ > 180) y_val_ = y_val_ * -1;
+
+	rect_.x += x_val_;
+	rect_.y += y_val_;
+
+	if (rect_.x > x_border || rect_.x < 0 || rect_.y > y_border || rect_.y < 0)
 	{
-		rect_.x += x_val_;
-		if (rect_.x > x_border)
-		{
-			is_move_ = false;
-		}
-	}
-	else if (bullet_dir_ == DIR_LEFT)
-	{
-		rect_.x -= x_val_;
-		if (rect_.x < 0)
-		{
-			is_move_ = false;
-		}
-	}
-	else if (bullet_dir_ == DIR_UP)
-	{
-		rect_.y -= y_val_;
-		if (rect_.y < 0)
-		{
-			is_move_ = false;
-		}
-	}
-	else if (bullet_dir_ == DIR_UP_LEFT)
-	{
-		rect_.x -= x_val_;
-		rect_.y -= y_val_;
-		if (rect_.x < 0 || rect_.y < 0)
-		{
-			is_move_ = false;
-		}
-	}
-	else if (bullet_dir_ == DIR_UP_RIGHT)
-	{
-		rect_.x += x_val_;
-		rect_.y -= y_val_;
-		if (rect_.x > x_border || rect_.y < 0)
-		{
-			is_move_ = false;
-		}
-	}
-	else if (bullet_dir_ == DIR_DOWN_LEFT)
-	{
-		rect_.x -= x_val_;
-		rect_.y += y_val_;
-		if (rect_.x < 0 || rect_.y > y_border)
-		{
-			is_move_ = false;
-		}
-	}
-	else if (bullet_dir_ == DIR_DOWN_RIGHT)
-	{
-		rect_.x += x_val_;
-		rect_.y += y_val_;
-		if (rect_.x > x_border || rect_.y > y_border)
-		{
-			is_move_ = false;
-		}
+		is_move_ = false;
 	}
 }

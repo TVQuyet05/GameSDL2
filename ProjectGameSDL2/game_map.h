@@ -14,6 +14,10 @@ public:
 	~TileMap() { ; }
 };
 
+// tile map tuong tu baseobject co cac so lieu , texture p_object, ...
+// tile map la dinh dang hinh anh mot o map la gi
+
+
 class GameMap
 {
 public:

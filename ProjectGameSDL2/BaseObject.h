@@ -18,9 +18,16 @@ public:
 	void Render(SDL_Renderer* des, const SDL_Rect* clip = NULL);
 	void Free();
 
+	bool CheckCollision(const SDL_Rect& object2);
+
 protected:
 	SDL_Texture* p_object_;
 	SDL_Rect rect_;
+
+	float x_val_;
+	float y_val_;
+
+	float angle_;
 };
 
 

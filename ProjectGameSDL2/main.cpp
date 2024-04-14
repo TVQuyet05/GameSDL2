@@ -4,7 +4,7 @@
 #include "ThreatToHouse.h"
 #include "ThreatToMain.h"
 #include "ImpTimer.h"
-
+#include "ExplosionObject.h"
 
 BaseObject g_background;
 
@@ -93,6 +93,10 @@ int main(int argc, char* argv[])
 	BaseObject blood_bar_of_house;
 	blood_bar_of_house.LoadImg("image/heartbar.png", g_screen);
 	blood_bar_of_house.SetRect(15, 9);
+
+	// Init list of explosion
+	std::vector<ExplosionObject*> p_explosion_list;
+
 
 	// Init main object player
 	MainObject p_player;
@@ -189,12 +193,21 @@ int main(int argc, char* argv[])
 			// If blood = 0 -> delete threat
 			if (threat_to_house->get_blood() < 1)
 			{
+				// Init explosion
+				ExplosionObject* exp_1 = new ExplosionObject();
+				exp_1->LoadImg("image/explosion.png", g_screen);
+				exp_1->set_pos_of_explosion(threat_to_house->GetRect());
+				exp_1->set_clip();
+				p_explosion_list.push_back(exp_1);
+
+
 				p_threat_to_house_list.erase(p_threat_to_house_list.begin() + i);
 				if (threat_to_house != NULL)
 				{
 					delete threat_to_house;
 					threat_to_house = NULL;
 				}
+
 			}
 			else
 			{
@@ -281,6 +294,13 @@ int main(int argc, char* argv[])
 			// If blood = 0 or threat collision with house -> delete threat
 			if (ret1 || threat_to_main->get_blood() < 1)
 			{
+				// Init explosion
+				ExplosionObject* exp_1 = new ExplosionObject();
+				exp_1->LoadImg("image/explosion.png", g_screen);
+				exp_1->set_pos_of_explosion(threat_to_main->GetRect());
+				exp_1->set_clip();
+				p_explosion_list.push_back(exp_1);
+
 				p_threat_to_main_list.erase(p_threat_to_main_list.begin() + i);
 				if (threat_to_main != NULL)
 				{
@@ -299,6 +319,25 @@ int main(int argc, char* argv[])
 		p_player.DoPlayer(rect_of_main_house);
 		p_player.Show(g_screen);
 		p_player.HandleBullet(g_screen);
+
+
+		// Show explosion
+		for (int ex = 0; ex < p_explosion_list.size(); ex++)
+		{
+			ExplosionObject* exp = p_explosion_list.at(ex);
+			exp->ShowExplosion(g_screen);
+			if (exp->get_frame() == 6)
+			{
+				p_explosion_list.erase(p_explosion_list.begin() + ex);
+				if (exp != NULL)
+				{
+					delete exp;
+					exp = NULL;
+				}
+			}
+		}
+
+		//std::cout << p_explosion_list.size() << "\n";
 
 		// Render main house
 		main_house.Render(g_screen, NULL);

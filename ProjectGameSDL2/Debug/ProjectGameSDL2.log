@@ -1,10 +1,11 @@
 ﻿  main.cpp
-C:\GameSDL2\ProjectGameSDL2Copy\ProjectGameSDL2\main.cpp(150,50): warning C4018: '>': signed/unsigned mismatch
-C:\GameSDL2\ProjectGameSDL2Copy\ProjectGameSDL2\main.cpp(158,21): warning C4018: '<': signed/unsigned mismatch
-C:\GameSDL2\ProjectGameSDL2Copy\ProjectGameSDL2\main.cpp(171,24): warning C4018: '<': signed/unsigned mismatch
-C:\GameSDL2\ProjectGameSDL2Copy\ProjectGameSDL2\main.cpp(212,49): warning C4018: '>': signed/unsigned mismatch
-C:\GameSDL2\ProjectGameSDL2Copy\ProjectGameSDL2\main.cpp(220,21): warning C4018: '<': signed/unsigned mismatch
-C:\GameSDL2\ProjectGameSDL2Copy\ProjectGameSDL2\main.cpp(228,24): warning C4018: '<': signed/unsigned mismatch
-C:\GameSDL2\ProjectGameSDL2Copy\ProjectGameSDL2\main.cpp(257,24): warning C4018: '<': signed/unsigned mismatch
+C:\GameSDL2\ProjectGameSDL2Copy\ProjectGameSDL2\main.cpp(154,50): warning C4018: '>': signed/unsigned mismatch
+C:\GameSDL2\ProjectGameSDL2Copy\ProjectGameSDL2\main.cpp(162,21): warning C4018: '<': signed/unsigned mismatch
+C:\GameSDL2\ProjectGameSDL2Copy\ProjectGameSDL2\main.cpp(175,24): warning C4018: '<': signed/unsigned mismatch
+C:\GameSDL2\ProjectGameSDL2Copy\ProjectGameSDL2\main.cpp(225,49): warning C4018: '>': signed/unsigned mismatch
+C:\GameSDL2\ProjectGameSDL2Copy\ProjectGameSDL2\main.cpp(233,21): warning C4018: '<': signed/unsigned mismatch
+C:\GameSDL2\ProjectGameSDL2Copy\ProjectGameSDL2\main.cpp(241,24): warning C4018: '<': signed/unsigned mismatch
+C:\GameSDL2\ProjectGameSDL2Copy\ProjectGameSDL2\main.cpp(270,24): warning C4018: '<': signed/unsigned mismatch
+C:\GameSDL2\ProjectGameSDL2Copy\ProjectGameSDL2\main.cpp(325,23): warning C4018: '<': signed/unsigned mismatch
 Debug\BaseObject.obj : warning LNK4042: object specified more than once; extras ignored
   ProjectGameSDL2.vcxproj -> C:\GameSDL2\ProjectGameSDL2Copy\Debug\ProjectGameSDL2.exe

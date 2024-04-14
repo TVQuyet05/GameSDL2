@@ -141,6 +141,7 @@
     <ClCompile Include="BaseObject.h" />
     <ClCompile Include="BulletObject.cpp" />
     <ClCompile Include="CommonFunc.cpp" />
+    <ClCompile Include="ExplosionObject.cpp" />
     <ClCompile Include="ImpTimer.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainObject.cpp" />
@@ -150,6 +151,7 @@
   <ItemGroup>
     <ClInclude Include="BulletObject.h" />
     <ClInclude Include="CommonFunc.h" />
+    <ClInclude Include="ExplosionObject.h" />
     <ClInclude Include="ImpTimer.h" />
     <ClInclude Include="MainObject.h" />
     <ClInclude Include="ThreatToHouse.h" />

@@ -145,6 +145,7 @@
     <ClCompile Include="ImpTimer.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainObject.cpp" />
+    <ClCompile Include="TextObject.cpp" />
     <ClCompile Include="ThreatToHouse.cpp" />
     <ClCompile Include="ThreatToMain.cpp" />
   </ItemGroup>
@@ -154,6 +155,7 @@
     <ClInclude Include="ExplosionObject.h" />
     <ClInclude Include="ImpTimer.h" />
     <ClInclude Include="MainObject.h" />
+    <ClInclude Include="TextObject.h" />
     <ClInclude Include="ThreatToHouse.h" />
     <ClInclude Include="ThreatToMain.h" />
   </ItemGroup>

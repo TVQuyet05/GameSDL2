@@ -5,14 +5,22 @@
 #include "ThreatToMain.h"
 #include "ImpTimer.h"
 #include "ExplosionObject.h"
+#include "TextObject.h"
 
 BaseObject g_background;
+
+TTF_Font* font_time = NULL;
+
+int score_of_player = 0;
 
 const int max_blood_of_house = 20000;
 const int max_blood_of_player = 300;
 
 int blood_of_house = max_blood_of_house;
 int blood_of_player = max_blood_of_player;
+
+int numbers_threat_to_house_created = 0;
+int numbers_threat_to_main_created = 0;
 
 bool InitData()
 {
@@ -45,6 +53,41 @@ bool InitData()
 				success = false;
 			}
 		}
+
+		// Init font of text
+		if (TTF_Init() == -1)
+		{
+			success = false;
+		}
+
+		// Load up font
+		font_time = TTF_OpenFont("font/Anton.ttf", 25);
+		if (font_time == NULL)
+		{
+			success = false;
+		}
+
+		// Init mixer
+		if (Mix_OpenAudio(22050, MIX_DEFAULT_FORMAT, 2, 4096) == -1)
+		{
+			success = false;
+		}
+		
+		// Read file wav audio
+		g_sound_bullet = Mix_LoadWAV("sound/laser.wav");
+
+		if (g_sound_bullet == NULL)
+		{
+			success = false;
+		}
+		//Mix_VolumeChunk(g_sound_bullet, MIX_MAX_VOLUME / 8);
+
+		g_sound_track = Mix_LoadMUS("sound/soundtrack.mp3");
+		if (g_sound_track == NULL)
+		{
+			success = false;
+		}
+
 	}
 
 	return success;
@@ -122,6 +165,17 @@ int main(int argc, char* argv[])
 
 	// Init list threat to main
 	std::vector<ThreatToMain*> p_threat_to_main_list;
+
+	// Time text
+	TextObject time_game_text;
+	time_game_text.SetColor(TextObject::WHITE_TEXT);
+
+	// Score text
+	TextObject score_text;
+	score_text.SetColor(TextObject::WHITE_TEXT);
+
+	// Play soundtrack
+	Mix_PlayMusic(g_sound_track, -1);
 	
 	bool is_quit = false;
 	while (!is_quit)
@@ -138,7 +192,7 @@ int main(int argc, char* argv[])
 				is_quit = true;
 			}
 
-			p_player.HandleInputAction(g_event, g_screen);
+			p_player.HandleInputAction(g_event, g_screen, g_sound_bullet);
 		}
 
 		SDL_SetRenderDrawColor(g_screen, RENDER_DRAW_COLOR, RENDER_DRAW_COLOR, RENDER_DRAW_COLOR, RENDER_DRAW_COLOR);
@@ -151,11 +205,13 @@ int main(int argc, char* argv[])
 		//threat_to_house.Render(g_screen, NULL);
 
 		// Add threat into threat to house list
-		if (time_of_game / TIME_THREAT_TO_HOUSE_APPEAR > p_threat_to_house_list.size())
+		if (time_of_game / TIME_THREAT_TO_HOUSE_APPEAR > numbers_threat_to_house_created)
 		{
 			ThreatToHouse* threat_to_house = new ThreatToHouse();
 			threat_to_house->LoadImg("image/threat_to_house.png", g_screen);
 			p_threat_to_house_list.push_back(threat_to_house);
+
+			numbers_threat_to_house_created++;
 		}
 
 		// Move threat of threat to house list
@@ -208,6 +264,9 @@ int main(int argc, char* argv[])
 					threat_to_house = NULL;
 				}
 
+				// Increase score
+				score_of_player += 1;
+
 			}
 			else
 			{
@@ -222,11 +281,13 @@ int main(int argc, char* argv[])
 		//threat_to_main.Render(g_screen, NULL);
 
 		// Add threat into threat to main list
-		if (time_of_game / TIME_THREAT_TO_MAIN_APPEAR > p_threat_to_main_list.size())
+		if (time_of_game / TIME_THREAT_TO_MAIN_APPEAR > numbers_threat_to_main_created)
 		{
 			ThreatToMain* threat_to_main = new ThreatToMain();
 			threat_to_main->LoadImg("image/threat_to_main.png", g_screen);
 			p_threat_to_main_list.push_back(threat_to_main);
+
+			numbers_threat_to_main_created++;
 		}
 
 		// Move threat of threat to main list
@@ -307,6 +368,9 @@ int main(int argc, char* argv[])
 					delete threat_to_main;
 					threat_to_main = NULL;
 				}
+
+				// Increase score
+				score_of_player += 2;
 			}
 			else
 			{
@@ -375,6 +439,21 @@ int main(int argc, char* argv[])
 			}
 		}
 		
+		// Show time of game
+		std::string str_time = "Time : ";
+		std::string str_val = std::to_string(time_of_game / 1000);
+		str_time += str_val;
+		time_game_text.SetText(str_time);
+		time_game_text.LoadFromRenderText(font_time, g_screen);
+		time_game_text.RenderText(g_screen, SCREEN_WIDTH - 200, 12);
+
+		// Show score of player
+		std::string str_score = "Score : ";
+		str_val = std::to_string(score_of_player);
+		str_score += str_val;
+		score_text.SetText(str_score);
+		score_text.LoadFromRenderText(font_time, g_screen);
+		score_text.RenderText(g_screen, SCREEN_WIDTH - 400, 12);
 
 		SDL_RenderPresent(g_screen);
 

@@ -16,7 +16,7 @@ public:
 	MainObject();
 	~MainObject();
 
-	void HandleInputAction(SDL_Event events, SDL_Renderer* screen);
+	void HandleInputAction(SDL_Event events, SDL_Renderer* screen, Mix_Chunk* bullet_sound);
 	void DoPlayer(const SDL_Rect& other_object);
 	void Show(SDL_Renderer* des);
 

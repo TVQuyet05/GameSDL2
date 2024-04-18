@@ -18,6 +18,9 @@ static SDL_Window* g_window = NULL;
 static SDL_Renderer* g_screen = NULL;
 static SDL_Event g_event;
 
+static Mix_Chunk* g_sound_bullet;
+static Mix_Music* g_sound_track;
+
 const int FRAME_PER_SECOND = 60;
 
 const int SCREEN_WIDTH = 1480;
@@ -27,8 +30,8 @@ const int SCREEN_BPP = 32;
 const int MIDDLE_SCREEN_WIDTH = 735;
 const int MIDDLE_SCREEN_HEIGHT = 360;
 
-const int TIME_THREAT_TO_HOUSE_APPEAR = 11000;
-const int TIME_THREAT_TO_MAIN_APPEAR = 10000;
+const int TIME_THREAT_TO_HOUSE_APPEAR = 5000;
+const int TIME_THREAT_TO_MAIN_APPEAR = 7000;
 
 //const int COLOR_KEY_R = 167; //0xa7;
 //const int COLOR_KEY_G = 175; //0xaf;

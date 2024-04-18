@@ -16,7 +16,7 @@ MainObject::~MainObject()
 
 }
 
-void MainObject::HandleInputAction(SDL_Event events, SDL_Renderer* screen)
+void MainObject::HandleInputAction(SDL_Event events, SDL_Renderer* screen, Mix_Chunk* bullet_sound)
 {
 	// Control the character with the keyboard
 	if (events.type == SDL_KEYDOWN)
@@ -95,6 +95,8 @@ void MainObject::HandleInputAction(SDL_Event events, SDL_Renderer* screen)
 
 			p_bullet->set_is_move(true);
 			p_bullet_list_.push_back(p_bullet);
+
+			Mix_PlayChannel(-1, bullet_sound, 0);
 		}
 	}
 	 

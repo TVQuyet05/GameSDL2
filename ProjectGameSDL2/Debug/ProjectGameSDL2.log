@@ -1,8 +1,8 @@
 ﻿  main.cpp
-C:\GameSDL2\ProjectGameSDL2Copy\ProjectGameSDL2\main.cpp(218,21): warning C4018: '<': signed/unsigned mismatch
-C:\GameSDL2\ProjectGameSDL2Copy\ProjectGameSDL2\main.cpp(231,24): warning C4018: '<': signed/unsigned mismatch
-C:\GameSDL2\ProjectGameSDL2Copy\ProjectGameSDL2\main.cpp(294,21): warning C4018: '<': signed/unsigned mismatch
-C:\GameSDL2\ProjectGameSDL2Copy\ProjectGameSDL2\main.cpp(302,24): warning C4018: '<': signed/unsigned mismatch
-C:\GameSDL2\ProjectGameSDL2Copy\ProjectGameSDL2\main.cpp(331,24): warning C4018: '<': signed/unsigned mismatch
-C:\GameSDL2\ProjectGameSDL2Copy\ProjectGameSDL2\main.cpp(389,23): warning C4018: '<': signed/unsigned mismatch
+C:\GameSDL2\ProjectGameSDL2Copy\ProjectGameSDL2\main.cpp(352,21): warning C4018: '<': signed/unsigned mismatch
+C:\GameSDL2\ProjectGameSDL2Copy\ProjectGameSDL2\main.cpp(365,24): warning C4018: '<': signed/unsigned mismatch
+C:\GameSDL2\ProjectGameSDL2Copy\ProjectGameSDL2\main.cpp(428,21): warning C4018: '<': signed/unsigned mismatch
+C:\GameSDL2\ProjectGameSDL2Copy\ProjectGameSDL2\main.cpp(436,24): warning C4018: '<': signed/unsigned mismatch
+C:\GameSDL2\ProjectGameSDL2Copy\ProjectGameSDL2\main.cpp(465,24): warning C4018: '<': signed/unsigned mismatch
+C:\GameSDL2\ProjectGameSDL2Copy\ProjectGameSDL2\main.cpp(523,23): warning C4018: '<': signed/unsigned mismatch
   ProjectGameSDL2.vcxproj -> C:\GameSDL2\ProjectGameSDL2Copy\Debug\ProjectGameSDL2.exe

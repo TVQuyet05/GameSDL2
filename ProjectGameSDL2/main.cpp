@@ -10,10 +10,11 @@
 BaseObject g_background;
 
 TTF_Font* font_time = NULL;
+TTF_Font* font_name = NULL;
 
 int score_of_player = 0;
 
-const int max_blood_of_house = 20000;
+const int max_blood_of_house = 2000;
 const int max_blood_of_player = 300;
 
 int blood_of_house = max_blood_of_house;
@@ -21,6 +22,16 @@ int blood_of_player = max_blood_of_player;
 
 int numbers_threat_to_house_created = 0;
 int numbers_threat_to_main_created = 0;
+
+bool CheckFocusWithRect(const int& x, const int& y, const SDL_Rect& rect)
+{
+	if (x >= rect.x && x <= rect.x + rect.w &&
+		y >= rect.y && y <= rect.y + rect.h)
+	{
+		return true;
+	}
+	return false;
+}
 
 bool InitData()
 {
@@ -62,7 +73,9 @@ bool InitData()
 
 		// Load up font
 		font_time = TTF_OpenFont("font/Anton.ttf", 25);
-		if (font_time == NULL)
+		font_name = TTF_OpenFont("font/font_text.ttf", 100);
+
+		if (font_time == NULL || font_name == NULL)
 		{
 			success = false;
 		}
@@ -125,6 +138,130 @@ int main(int argc, char* argv[])
 		return -1;
 	}
 
+	// Play soundtrack
+	Mix_PlayMusic(g_sound_track, -1);
+
+
+	// Make menu
+	BaseObject image_menu;
+	image_menu.LoadImg("image/backhome.png", g_screen);
+	
+	BaseObject button_play;
+	button_play.LoadImg("image/button_play.png", g_screen);
+	button_play.SetRect(1160, 350);
+	
+	BaseObject button_quit;
+	button_quit.LoadImg("image/button_quit.png", g_screen);
+	button_quit.SetRect(1160, 460);
+
+	BaseObject button_play_down;
+	button_play_down.LoadImg("image/button_play_down.png", g_screen);
+	button_play_down.SetRect(1160, 350);
+
+	BaseObject button_quit_down;
+	button_quit_down.LoadImg("image/button_quit_down.png", g_screen);
+	button_quit_down.SetRect(1160, 460);
+
+	TextObject first_name_text;
+	first_name_text.SetColor(TextObject::BLACK_TEXT);
+	std::string first_name = "DYNAMIC";
+	first_name_text.SetText(first_name);
+	first_name_text.LoadFromRenderText(font_name, g_screen);
+	
+	TextObject second_name_text;
+	second_name_text.SetColor(TextObject::BLACK_TEXT);
+	std::string second_name = "TANK";
+	second_name_text.SetText(second_name);
+	second_name_text.LoadFromRenderText(font_name, g_screen);
+
+	bool start = false;
+	int xmm = 0;
+	int ymm = 0;
+	int button = 0;
+	SDL_Event m_event;
+	int th = 0;
+	int tk = 0;
+	while (!start) {
+
+		image_menu.Render(g_screen);
+		first_name_text.RenderText(g_screen, 100, 30);
+		second_name_text.RenderText(g_screen, 180, 140);
+		
+		if (th == 1)
+		{
+			button_play_down.Render(g_screen);
+		}
+		else
+		{ 
+			button_play.Render(g_screen);
+		}
+		
+		if (tk == 1)
+		{
+			button_quit_down.Render(g_screen);
+		}
+		else
+		{
+			button_quit.Render(g_screen);
+		}
+		
+
+		while (SDL_PollEvent(&m_event))
+		{
+			switch (m_event.type)
+			{
+			case SDL_QUIT:
+				return 0;
+			case SDL_MOUSEMOTION:
+			{
+				button = SDL_GetMouseState(&xmm, &ymm);
+
+				if (CheckFocusWithRect(xmm, ymm, button_play.GetRect()))
+				{
+					th = 1;
+					
+				}
+				else
+				{
+					th = 0;
+				}
+
+				
+				if (CheckFocusWithRect(xmm, ymm, button_quit.GetRect()))
+				{
+					tk = 1;
+				}
+				else
+				{
+					tk = 0;
+				}
+
+				break;
+			}
+			case SDL_MOUSEBUTTONDOWN:
+			{
+				xmm = m_event.button.x;
+				ymm = m_event.button.y;
+
+				if (CheckFocusWithRect(xmm, ymm, button_play.GetRect()))
+				{
+					start = true;
+				}
+				else if (CheckFocusWithRect(xmm, ymm, button_quit.GetRect()))
+				{
+					return 1;
+				}
+			}
+			default:
+				break;
+			}
+		}
+
+		SDL_RenderPresent(g_screen);
+	}
+
+
+
 	// Init time to calculate fps
 	ImpTimer fps_timer;
 
@@ -174,9 +311,6 @@ int main(int argc, char* argv[])
 	TextObject score_text;
 	score_text.SetColor(TextObject::WHITE_TEXT);
 
-	// Play soundtrack
-	Mix_PlayMusic(g_sound_track, -1);
-	
 	bool is_quit = false;
 	while (!is_quit)
 	{
@@ -438,6 +572,8 @@ int main(int argc, char* argv[])
 				return 1;
 			}
 		}
+
+		
 		
 		// Show time of game
 		std::string str_time = "Time : ";

@@ -24,6 +24,14 @@
 #### dynamic tank
 - Xe tăng chúng ta điều khiển có thể di chuyển linh hoạt cả bản đồ để bắn hạ kẻ địch và bảo vệ nhà.
 
+### Các loại vật phẩm
+#### Hộp sửa chữa
+- Khi có một xe tăng địch chết sẽ có xác suất rơi ra vật phẩm này.
+- khi xe của ta nhặt được vật phẩm này thì nhà chính sẽ được tăng thêm một lượng máu nhất định.
+#### Trái tim
+- Khi có một xe tăng địch chết sẽ có xác suất rơi ra vật phẩm này.
+- khi xe của ta nhặt được vật phẩm này thì xe tăng của ta sẽ được tăng thêm một lượng máu nhất định.
+  
 ## Các kĩ thuật lập trình đã sử dụng
 - Vòng lặp
 - Vector

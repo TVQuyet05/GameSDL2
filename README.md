@@ -6,6 +6,8 @@
 
   Trong tương lai xa, hành tinh Zeta-9 đang bị xâm lược bởi một thế lực ngoài hành tinh độc ác. Chúng đã triển khai một đội xe tăng tấn công để tiêu diệt những căn nhà cuối cùng của con người. Bạn là một xe tăng chiến đấu, được giao nhiệm vụ điều khiển chiếc xe tăng cuối cùng của loài người để đánh lui kẻ thù, bảo vệ ngôi nhà - căn cứ cực kì quan trọng.
 ## Chi tiết về game
+### Video demo game
+- Bạn có thể xem video về game [tại đây.](https://drive.google.com/file/d/1JNJrRxPaFfmMwob8dDWy7iYEZejhImWd/view?usp=sharing)
 ### Điều khiển
 - Sử dụng bốn phím lên, xuống, sang trái, sang phải để di chuyển xe tăng theo hướng tương ứng.
 - Sử dụng chuột để xoay xe tăng và click chuột để bắn đạn từ xe tăng theo hướng của chuột.
@@ -21,7 +23,7 @@
 - Xe tăng này chỉ nhắm đến mục tiêu là xe tăng của bạn.
 - Xe tăng bám riết sẽ luôn giữ một khoảng cách cố định với xe của bạn và chúng luôn bám theo bạn.
 - Ngoài ra, chúng còn có thể bắn ra đạn hướng tới xe tăng của bạn và gây thiệt hại nặng nề.
-#### dynamic tank
+#### Dynamic tank
 - Xe tăng chúng ta điều khiển có thể di chuyển linh hoạt cả bản đồ để bắn hạ kẻ địch và bảo vệ nhà.
 
 ### Các loại vật phẩm

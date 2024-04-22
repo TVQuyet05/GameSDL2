@@ -25,10 +25,10 @@
 - Xe tăng chúng ta điều khiển có thể di chuyển linh hoạt cả bản đồ để bắn hạ kẻ địch và bảo vệ nhà.
 
 ### Các loại vật phẩm
-#### Hộp sửa chữa
+#### Red jar
 - Khi có một xe tăng địch chết sẽ có xác suất rơi ra vật phẩm này.
 - khi xe của ta nhặt được vật phẩm này thì nhà chính sẽ được tăng thêm một lượng máu nhất định.
-#### Trái tim
+#### Green jar
 - Khi có một xe tăng địch chết sẽ có xác suất rơi ra vật phẩm này.
 - khi xe của ta nhặt được vật phẩm này thì xe tăng của ta sẽ được tăng thêm một lượng máu nhất định.
   
@@ -46,7 +46,7 @@
 - AI enemy
   
 ## Tự đánh giá
-- Theo đánh giá của bản thân, em đánh giá game DYNAMIC TANK xứng đáng với điểm 8.5 ạ.
+- Theo đánh giá của bản thân, em đánh giá game DYNAMIC TANK xứng đáng với điểm 9 ạ.
 - DYNAMIC TANK là game hoàn toàn do em tự viết và phát triển.
 - Game có đầy đủ các tính năng cơ bản như : nhạc nền, âm thanh, chuyển động, hoạt ảnh, text, ...
 - Ngoài ra, game còn có thêm nhiều tính năng mới như : high score, AI enemy, ...
